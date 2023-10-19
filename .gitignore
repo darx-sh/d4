@@ -1,0 +1,15 @@
+.idea
+/target
+tmp
+node_modules
+.next
+.turbo
+.env.server
+.env.dashboard
+*.db
+.DS_Store
+**/target/
+SNAPSHOT.bin
+crates/server/tests/basic_test/server/
+crates/core/tests/server
+crates/core/tests/darx_envs

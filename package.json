@@ -1,0 +1,29 @@
+{
+  "name": "darx",
+  "version": "0.0.1",
+  "description": "Makes your database more accessible",
+  "private": true,
+  "scripts": {
+    "dev:dashboard": "dotenv -e .env.dashboard -- turbo run dev --filter dashboard",
+    "dev:server": "dotenv -e .env.server -- turbo run dev --filter server",
+    "dev:d": "npm run dev:dashboard",
+    "dev:s": "npm run dev:server",
+    "build:d": "dotenv -e .env.dashboard -- turbo run build --filter dashboard",
+    "build:s": "dotenv -e .env.server -- cargo build",
+    "test:s": "dotenv -e .env.server -- cargo test",
+    "lint": "turbo lint --continue",
+    "typecheck": "turbo typecheck --continue"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --fix"
+  },
+  "packageManager": "pnpm@8.2.0",
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "turbo": "^1.9.3",
+    "dotenv-cli": "latest"
+  }
+}
